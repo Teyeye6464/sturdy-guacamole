@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptocurrency Exchange</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cryptocurrency Exchange</h1>
+    <ul>
+        {% for cryptocurrency in cryptocurrencies %}
+        <li>{{ cryptocurrency.name }} ({{ cryptocurrency.symbol }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('payment') }}">Make a payment</a>
+</body>
+</html>
