@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptocurrency Exchange - Wallet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cryptocurrency Exchange - Wallet</h1>
+    <p>Balance: {{ wallet.balance }}</p>
+    <a href="{{ url_for('payment') }}">Make a payment</a>
+</body>
+</html>
