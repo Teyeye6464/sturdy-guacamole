@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptocurrency Exchange - Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cryptocurrency Exchange - Payment</h1>
+    <form action="{{ url_for('payment') }}" method="post">
+        <select name="cryptocurrency_id">
+            {% for cryptocurrency in cryptocurrencies %}
+            <option value="{{ cryptocurrency.id }}">{{ cryptocurrency.name }} ({{ cryptocurrency.symbol }})</option>
+            {% endfor %}
+        </select>
+        <input type="number" name="amount" placeholder="Amount">
+        <button type="submit">Make a payment</button>
+    </form>
+    <a href="{{ url_for('wallet') }}">View wallet</a>
+</body>
+</html>
